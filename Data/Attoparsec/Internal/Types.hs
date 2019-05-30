@@ -136,8 +136,8 @@ instance Mon.Monoid More where
     mempty  = Incomplete
 
 instance Monad (Parser i) where
-    fail = Fail.fail
-    {-# INLINE fail #-}
+--    fail = Fail.fail
+--    {-# INLINE fail #-}
 
     return = App.pure
     {-# INLINE return #-}

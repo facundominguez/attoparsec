@@ -92,8 +92,8 @@ instance Monad m => Monad (ZeptoT m) where
         Fail err -> return (Fail err)
     {-# INLINE (>>=) #-}
 
-    fail = Fail.fail
-    {-# INLINE fail #-}
+--    fail = Fail.fail
+--    {-# INLINE fail #-}
 
 instance Monad m => Fail.MonadFail (ZeptoT m) where
     fail msg = Parser $ \_ -> return (Fail msg)
